@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#efe9dc" />
+  <meta name="description" content="An editorial archive of the inventions, drawings and stories behind watchmaking." />
+  <title>The Watch Patent Archive</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="The Watch Patent Archive home"><span class="wordmark-mark">WPA</span><span>The Watch Patent Archive</span></a>
+    <nav class="desktop-nav"><a href="#archive">Archive</a><a href="#brands">Brands</a><a href="#collections">Curated</a><a href="#pairings">Watch + Art</a><a href="#walls">Collector Walls</a></nav>
+    <div class="header-actions"><button class="text-button" data-open-matcher>Match my watches</button><button class="icon-button mobile-only" id="menuOpen" aria-label="Open menu">☰</button></div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <button class="icon-button close-menu" id="menuClose" aria-label="Close menu">×</button><span class="eyebrow">Explore the archive</span>
+    <a href="#archive">Archive</a><a href="#brands">Brands</a><a href="#collections">Collections</a><a href="#pairings">Pairings</a><a href="#walls">Collector Walls</a>
+    <button class="primary-button" data-open-matcher>Build my collection <span>→</span></button>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">An archive for people who care how things came to be</div>
+        <h1>The inventions behind<br>the watches we remember.</h1>
+        <p class="hero-deck">Original patent drawings, researched and presented as objects of design history. Built to be read, discussed—and lived with.</p>
+        <div class="hero-actions"><a class="primary-button" href="#archive">Enter the archive <span>→</span></a><button class="secondary-button" data-open-matcher><span>✦</span> Build around my watch box</button></div>
+        <div class="trust-line"><span>▤ Context before commerce</span><span>✓ Archival-source research</span><span>▱ Printed to order</span></div>
+      </div>
+      <div class="hero-art-wrap">
+        <div class="hero-art-sheet"><div class="sheet-meta"><span>EXHIBITION STUDY 01</span><span>WATCHMAKING / MECHANISM</span></div><div data-drawing="chrono"></div><div class="sheet-caption"><span class="caption-no">01</span><div><strong>Chronograph architecture</strong><small>A study in turning mechanical complexity into readable time.</small></div></div></div>
+        <span class="hero-note">The print is the object.<br>The story is what makes it yours.</span>
+      </div>
+    </section>
+
+    <section class="manifesto page-pad"><div class="section-number">I.</div><p>We do not think of patents as paperwork. At their best, they are <em>portraits of an idea before it became familiar.</em></p><div class="manifesto-side">Every piece in the archive is selected for what it can teach, what it can show, and how it lives on a wall—not simply for the name printed at the top.</div></section>
+
+    <section class="archive-section page-pad" id="archive">
+      <div class="section-heading"><div><span class="eyebrow">The Archive</span><h2>Objects worth knowing.</h2></div><p>Browse by the way you collect: maker, technology, era or the story you want the room to tell.</p></div>
+      <div class="archive-toolbar"><div class="filter-scroll" id="archiveFilters"></div><button class="filter search-filter">⌕ Search archive</button></div>
+      <div class="archive-grid" id="archiveGrid"></div>
+      <div class="archive-footer"><span>Showing editorial studies for the prototype</span><button class="text-button" id="viewAll">View complete archive →</button></div>
+    </section>
+
+    <section class="brand-index page-pad" id="brands"><div class="brand-title-row"><span class="eyebrow">Browse by maker</span><span class="count">17 houses in the working archive</span></div><div class="brand-list" id="brandList"></div></section>
+
+    <section class="curated page-pad" id="collections"><div class="section-heading light-heading"><div><span class="eyebrow">Curated Collections</span><h2>A wall can make an argument.</h2></div><p>Some patents become more meaningful beside one another. These sets are composed around turning points, shared design ideas and chapters in watchmaking history.</p></div><div class="collection-grid" id="collectionGrid"></div></section>
+
+    <section class="story-feature page-pad"><div class="story-art"><div class="story-sheet"><div data-drawing="electric"></div></div><span class="vertical-caption">THE ARCHIVE / ELECTRIC TIME</span></div><div class="story-copy"><span class="eyebrow">From the reading room</span><h2>The moment the watch learned a new language.</h2><p class="lead">Before quartz became ordinary, electronic timekeeping felt astonishingly new. The tuning-fork era sits at a rare intersection: visibly mechanical, electrically driven and culturally futuristic.</p><p>That is what makes the best patent art more than decoration. You can point to the drawing and explain the chapter of history it belongs to.</p><button class="primary-button dark" data-open-story="accutron">Read the full object story →</button></div></section>
+
+    <section class="matcher-section page-pad"><div id="matcherInline"></div></section>
+
+    <section class="pairings page-pad" id="pairings"><div class="section-heading"><div><span class="eyebrow">Watch + Art</span><h2>Give the object its origin story.</h2></div><p>Selected watches paired with a patent work or small collection that makes the watch more interesting to own—and much more interesting to give.</p></div><div class="pairing-grid" id="pairingGrid"></div></section>
+
+    <section class="walls page-pad" id="walls"><div class="walls-copy"><span class="eyebrow">Collector Walls</span><h2>The archive after it leaves us.</h2><p>A collection changes when it enters a home, office, studio or workshop. Share yours and tell us why you chose it.</p><button class="secondary-button light" id="wallSubmit">⇧ Submit your wall</button></div><div class="wall-gallery"><div class="wall-photo wall-one"><div class="frame f1"><div data-drawing="bezel"></div></div><div class="frame f2"><div data-drawing="chrono"></div></div><span>Collector study / New York</span></div><div class="wall-photo wall-two"><div class="frame f3"><div data-drawing="square"></div></div><span>Office wall / London</span></div></div></section>
+
+    <section class="newsletter page-pad"><div><span class="eyebrow">Notes from the archive</span><h2>One remarkable idea at a time.</h2></div><form id="newsletterForm"><input type="email" placeholder="Email address" aria-label="Email address"><button>Join the reading list →</button></form></section>
+  </main>
+
+  <footer class="footer page-pad"><div class="footer-mark"><span class="wordmark-mark">WPA</span><strong>The Watch Patent Archive</strong><p>Researching the ideas, mechanisms and forms that made watch history visible.</p></div><div class="footer-col"><span>Explore</span><a href="#archive">Archive</a><a href="#brands">Brands</a><a href="#collections">Curated collections</a><a href="#pairings">Watch + Art</a></div><div class="footer-col"><span>Institution</span><a href="#top">About the archive</a><a href="#walls">Collector walls</a><a href="#top">Research standards</a><a href="#top">Contact</a></div><div class="footer-bottom"><span>Built for collectors, designers and the incurably curious.</span><span>© 2026 The Watch Patent Archive</span></div></footer>
+
+  <div class="modal-backdrop" id="detailBackdrop" hidden><div class="detail-modal" id="detailModal"></div></div>
+  <div class="modal-backdrop matcher-backdrop" id="matcherBackdrop" hidden><div class="matcher-modal-wrap"><button class="modal-close" data-close-matcher>×</button><div id="matcherModal"></div></div></div>
+  <script src="./app.js"></script>
+</body>
+</html>
