@@ -30,7 +30,7 @@ function openDetail(id,hash=true){
       <div class="buy-box"><div><span>Available print sizes</span><strong>${esc(p.sizes.join(' · '))}</strong><small>Finished artwork · printed to order</small></div><button class="primary-button" data-interest>Choose this work</button></div>
       <div class="related-block"><span class="eyebrow">Related works</span><div>${related(p).map(x=>`<button data-product="${x.id}">${image(x)}<span>${esc(x.title)}</span></button>`).join('')}</div></div>
     </div>`;
-  $('#detailBackdrop').hidden=false;document.body.classList.add('modal-open');$('[data-close]').onclick=closeDetail;$('[data-interest]').onclick=e=>e.currentTarget.textContent='Selected for inquiry ✓';wire($('.related-block'));if(hash)history.replaceState(null,'',`#product=${p.id}`)
+  $('#detailBackdrop').hidden=false;$('#detailModal').scrollTop=0;document.body.classList.add('modal-open');$('[data-close]').onclick=closeDetail;$('[data-interest]').onclick=e=>e.currentTarget.textContent='Selected for inquiry ✓';wire($('.related-block'));if(hash)history.replaceState(null,'',`#product=${p.id}`)
 }
 function closeDetail(){$('#detailBackdrop').hidden=true;document.body.classList.remove('modal-open');if(location.hash.startsWith('#product='))history.replaceState(null,'','#archive')}
 function wire(root){$$('[data-product]',root).forEach(el=>{el.onclick=e=>{e.stopPropagation();openDetail(el.dataset.product)};el.onkeydown=e=>{if(e.key==='Enter')openDetail(el.dataset.product)}})}
