@@ -15,7 +15,7 @@
     <div class="header-actions"><button class="text-button" data-open-matcher>Match my watches</button><button class="icon-button mobile-only" id="menuOpen" aria-label="Open menu">☰</button></div>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu" hidden>
+  <div class="mobile-menu" id="mobileMenu" hidden onclick="if(event.target.closest('a,[data-open-matcher]')) this.hidden=true">
     <button class="icon-button close-menu" id="menuClose" aria-label="Close menu">×</button><span class="eyebrow">Explore the archive</span>
     <a href="#archive">Archive</a><a href="#brands">Brands</a><a href="#collections">Collections</a><a href="#pairings">Pairings</a><a href="#walls">Collector Walls</a>
     <button class="primary-button" data-open-matcher>Build my collection <span>→</span></button>
